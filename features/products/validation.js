@@ -11,6 +11,7 @@ const createValidation = [
 ]
 
 const updateValidation = [
+  body('id').isNumeric().exists(),
   body('title').isString(),
   body('description').isString(),
   body('nbInStock').isNumeric(),
