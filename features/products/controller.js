@@ -4,7 +4,7 @@ const getAll = async (req, res, next) => {
   try {
     const products = await models.Product.findAll()
 
-    res.send(products.map(product => product.formatHome))
+    res.send(products)
   } catch (e) {
     next(e)
   }

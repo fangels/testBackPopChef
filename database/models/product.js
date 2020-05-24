@@ -1,11 +1,12 @@
 'use strict'
 module.exports = (sequelize, DataTypes) => {
-  const Products = sequelize.define('Products', {
+  const Product = sequelize.define('Product', {
     title: DataTypes.STRING,
     description: DataTypes.TEXT,
     nbInStock: DataTypes.INTEGER,
   }, {})
-  Products.associate = function (models) {
+  Product.associate = function (models) {
   }
-  return Products
+
+  return Product
 }
