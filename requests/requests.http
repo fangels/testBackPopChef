@@ -1,0 +1,8 @@
+GET {{host}}/auth?userName={{userName}}&password={{password}}
+Accept: application/json
+
+###
+GET {{host}}/private/user
+Authorization: Bearer {{token}}
+Accept: application/json
+###

@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@middlewares/*": ["routes/middlewares/*"],
+      "@models/*": ["database/models/*"],
+      "@services/*": ["services/*"],
+      "@config/*": ["config/*"],
+      "@features/*": ["features/*"],
+      "@repositories/*": ["database/repositories/*"],
+      "app": ["app"]
+    }
+  }
+}
