@@ -1,4 +1,5 @@
 const express = require('express')
+const { validateParams, } = require('@middlewares/validator')
 
 const {
   getAll,
@@ -7,16 +8,22 @@ const {
   updateProduct,
   deleteProduct,
 } = require('./controller')
+const {
+  getValidation,
+  createValidation,
+  updateValidation,
+  deleteValidation,
+} = require('./validation')
 
 const productsRouterManager = express()
 const productsRouter = express.Router()
 
 productsRouter
   .route('/')
-  .get(getProduct)
-  .create(createProduct)
-  .update(updateProduct)
-  .delete(deleteProduct)
+  .get(getValidation, validateParams, getProduct)
+  .create(createValidation, validateParams, createProduct)
+  .update(updateValidation, validateParams, updateProduct)
+  .delete(deleteValidation, validateParams, deleteProduct)
 
 productsRouter
   .route('/all')
