@@ -62,7 +62,7 @@ const deleteProduct = async (req, res, next) => {
 
     const product = await models.Product.findByPk(id)
 
-    await product.delete()
+    await product.destroy()
 
     res.send()
   } catch (error) {

@@ -18,7 +18,7 @@ const updateValidation = [
 ]
 
 const deleteValidation = [
-  body('id').isNumeric().exists(),
+  query('id').isNumeric().exists(),
 ]
 
 module.exports = {
