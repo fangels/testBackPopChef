@@ -21,8 +21,8 @@ const productsRouter = express.Router()
 productsRouter
   .route('/')
   .get(getValidation, validateParams, getProduct)
-  .create(createValidation, validateParams, createProduct)
-  .update(updateValidation, validateParams, updateProduct)
+  .post(createValidation, validateParams, createProduct)
+  .put(updateValidation, validateParams, updateProduct)
   .delete(deleteValidation, validateParams, deleteProduct)
 
 productsRouter
